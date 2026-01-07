@@ -92,31 +92,65 @@
   <button onclick="go()">Take me somewhere</button>
   <div class="loader" id="loader">Finding a place…</div>
 
-  <footer>Public websites only</footer>
+  <footer>Direct public websites only · No redirects</footer>
 </div>
 
 <script>
+  // Huge curated pool of safe, public websites (direct links only)
   const links = {
     any: [
       "https://en.wikipedia.org/wiki/Special:Random",
-      "https://www.reddit.com/r/random",
-      "https://randomwebsite.com/cgi-bin/random.pl",
-      "https://theuselessweb.com"
+      "https://www.wikihow.com/Special:Randomizer",
+      "https://www.boredpanda.com/",
+      "https://www.nationalgeographic.com/",
+      "https://www.imdb.com/",
+      "https://www.stackoverflow.com/",
+      "https://www.goodreads.com/",
+      "https://www.reddit.com/",
+      "https://www.khanacademy.org/",
+      "https://www.openstreetmap.org/",
+      "https://www.coursera.org/",
+      "https://www.mozilla.org/en-US/",
+      "https://www.howstuffworks.com/",
+      "https://www.history.com/",
+      "https://www.scientificamerican.com/",
+      "https://www.brainpickings.org/",
+      "https://www.lifehacker.com/",
+      "https://www.gutenberg.org/",
+      "https://www.npr.org/",
+      "https://www.mentalfloss.com/",
+      "https://www.coolmathgames.com/",
+      "https://www.geoguessr.com/",
+      "https://www.theuselessweb.com/",
+      "https://pointerpointer.com/",
+      "https://www.bouncingdvdlogo.com/",
+      "https://longdogechallenge.com/",
+      "https://thatsthefinger.com/",
+      "https://heeeeeeeey.com/"
     ],
     edu: [
       "https://en.wikipedia.org/wiki/Special:Random",
       "https://www.wikihow.com/Special:Randomizer",
-      "https://www.britannica.com/random"
+      "https://www.khanacademy.org/",
+      "https://www.coursera.org/",
+      "https://www.gutenberg.org/",
+      "https://www.nationalgeographic.com/",
+      "https://www.history.com/",
+      "https://www.scientificamerican.com/",
+      "https://www.brainpickings.org/"
     ],
     fun: [
-      "https://theuselessweb.com",
-      "https://pointerpointer.com",
-      "https://www.bouncingdvdlogo.com"
+      "https://www.boredpanda.com/",
+      "https://www.coolmathgames.com/",
+      "https://www.geoguessr.com/",
+      "https://www.theuselessweb.com/",
+      "https://pointerpointer.com/",
+      "https://www.bouncingdvdlogo.com/"
     ],
     weird: [
-      "https://thatsthefinger.com",
-      "https://heeeeeeeey.com",
-      "https://longdogechallenge.com"
+      "https://longdogechallenge.com/",
+      "https://thatsthefinger.com/",
+      "https://heeeeeeeey.com/"
     ]
   };
 
@@ -127,9 +161,10 @@
 
     document.getElementById("loader").style.display = "block";
 
+    // small delay to show loader
     setTimeout(() => {
-      window.location.href = choice;
-    }, 600);
+      window.location.href = choice; // DIRECT link
+    }, 400);
   }
 </script>
 
